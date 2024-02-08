@@ -1,0 +1,360 @@
+       
+       
+        /*--------------< general setup >--------------*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /*border: 1px solid;  /* for testing purposes */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+        /*--------------< Header CSS >--------------*/
+
+
+header {
+    background-color: rgb(23, 98, 219);
+    box-shadow: 0px -5px 30px rgba(0, 0, 0, 0.608);
+    width: 100%;
+    position: fixed;
+    z-index: 999;  /* to make the header always appear on the top */
+    display: flex;
+    justify-content: space-between;  /* x-axis */
+    align-items: center;  /* y-axis */
+    padding: 12px 200px;
+} 
+
+.logo {
+    height: 50px;
+    display: flex;
+}
+
+.nav_bar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 5px;
+    transition: 0.4s ease;
+}
+
+.logo:hover {
+    
+}
+
+.nav_bar a:hover {
+    color: rgb(255, 136, 0);
+}
+
+
+        /*--------------< Main section CSS >--------------*/
+
+
+section {
+    padding: 100px 200px;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url(elements/nasa-Q1p7bh3SHj8-unsplash.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;  /* when scrolling, the background won't move and it will remain stationary */
+}
+
+.main .main_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.main h3 {
+    color: white;
+    font-weight: 300;
+    font-size: 1.1em;
+}
+
+.main h1 {
+    color: #ffffff;
+    font-size: 3em;
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
+
+.main h2 {
+    color: white;
+    font-weight: 300;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+
+.main_button {
+    width: 200px;
+    padding: 10px 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    background-color: rgb(255, 136, 0);
+    text-align: center;
+    border-radius: 16px;
+    transition: 0.4s ease;  /* to make the transition smoother */
+}
+
+.main_button:hover {
+    background-color: rgb(255, 94, 0);
+    transform: scale(1.06);
+}
+
+.social_icons {
+    display: flex;
+    width: 200px;
+    padding: 2px;
+    justify-content: space-between;
+}
+
+.social_icons a {
+    color: rgba(255, 255, 255, 0.686);
+    font-size: 2em;
+}
+
+.social_icons a:hover {
+    color: white;
+    transform: scale(1.1);
+    transition: 0.4s ease;
+}
+
+.social_icons a:not(:hover) {
+    color: rgba(255, 255, 255, 0.686);
+    transition: 0.4s ease;
+}
+
+
+        /*--------------< Services section CSS >--------------*/
+
+
+#services {
+    padding: 40px;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.8em;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;  /* to wrap the general_card instead of resizing them when the screen is small */
+
+}
+
+.general_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 270px;
+    background-color: white;
+    box-shadow: 0px 0px 20px rgb(196, 196, 196);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 30px;
+    transition: 0.4s ease;
+}
+
+.general_card:hover {
+    transform: scale(1.1);
+}
+
+.general_card i {
+    font-size: 3.5em;
+    color: black;
+    padding: 10px;
+}
+
+.general_card h3 {
+    font-size: 1.5em;
+}
+
+.general_card p {
+    text-align: center;
+}
+
+
+       /*--------------< Projects section CSS >--------------*/
+
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: rgb(23, 98, 219);
+}
+
+#projects .title {
+    color: white;
+}
+
+#projects .content {
+    margin-top: 30px;
+}
+
+.image_card {
+    border: 4px solid white;
+    background-color: aliceblue;
+    overflow: hidden;
+    min-height: 14em;
+    width: 400px;
+    border-radius: 30px;
+    margin: 15px;
+    transition: 0.4s ease;  
+}
+
+.image_card:hover {
+    transform: scale(1.1);
+}
+
+.project_image img {
+    width: 100%;
+    
+}
+
+.image_card:hover img {
+    opacity: 0.9;
+}
+
+.project_info {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.project_info p {
+
+}
+
+.project_info strong {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project_info strong span {
+    font-size: 1.2em;
+}
+
+.project_info strong a {
+    text-decoration: none;
+    color: rgb(23, 98, 219);
+    font-size: 1.2em;
+    transition: 0.4s ease;
+}
+
+.project_info strong a:hover {
+    transform: scale(1.1);
+    color: rgb(44, 123, 251);
+}
+
+
+        /*--------------< Contact section CSS >--------------*/
+
+
+.contact {
+    padding: 40px
+} 
+
+.contact .general_card p {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+
+        /*--------------<Footer CSS >--------------*/
+
+
+footer {
+    background-color: rgb(44, 123, 251);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    margin-bottom: 0px;
+    padding: 15px;
+}
+
+footer p{
+    color: white;
+    font-size: 1.5em;
+    margin: 20px;
+}
+
+footer .social_icons {
+    margin: 20px;
+    width: 120px;
+}
+
+footer .social_icons a {
+    font-size: 1.5em;
+}
+
+
+        /*--------------<Responsive CSS >--------------*/
+
+@media (max-width:1023px) {
+    header {
+        padding: 12px 20px;
+    }
+
+    .content .contact{
+        flex-direction: column;
+    }
+
+    .main {
+        align-items:center;
+    }
+}
+
+@media (max-width:510px) {
+    body {
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width:450px){
+    header {
+        font-size: 10px;
+    }
+    
+    header .logo {
+        height: 30px;
+    }
+
+    .image_card,.general_card {
+        width: 90%;
+    }
+
+}
